@@ -38,23 +38,7 @@
      
 <a-gltf-model 
  scale="3 3 3" position="-36.827 -13.020 -48.521" rotation="0 100.000 0" src="https://cdn.glitch.com/08251dd0-ea8b-4d15-a4e4-74ab3405410a%2Fsupremeshoe.glb?v=1611049463568 
-           const rotate = (axis, pos, clock, cube) => {
-  const rotateVec = (axis, clock, vec) => {
-    var {x, y, z} = vec;
-    switch (axis) {
-      case "x": return clock ? {x, y:z, z:-y} : {x, y:-z, z:y}; 
-      case "y": return clock ? {x:z, y, z:-x} : {x:-z, y, z:x}; 
-      case "z": return clock ? {x:y, y:-x, z} : {x:-y, y:x, z}; 
-    }
-  };
-  return cube.map(([{x,y,z},id]) => {
-    const onPos
-      =  axis === "x" && x === pos
-      || axis === "y" && y === pos
-      || axis === "z" && z === pos;
-    return onPos ? [rotateVec(axis,clock,{x,y,z}),id] : [{x,y,z},id];
-  });
-};
+           
 ">
   </a-gltf-model>
      
